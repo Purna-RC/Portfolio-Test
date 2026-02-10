@@ -1,0 +1,163 @@
+/* About Description Text */
+.about__description {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.about__description:last-of-type {
+  margin-bottom: 50px;
+}
+
+/* Skills / Services Container */
+.about__skills {
+  margin-bottom: 60px;
+}
+
+/* Skill Box */
+.about__box {
+  background: #ffffff;
+  padding: 28px 24px;
+  border-radius: 10px;
+  border-bottom: 4px solid #2563eb;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.about__box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Icons */
+.about__icon {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 32px;
+  color: #2563eb;
+}
+
+/* Skill Title */
+.about__box-title {
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  color: #0f172a;
+  text-transform: capitalize;
+}
+
+/* Different Accent Colors */
+.about__box:nth-child(2) {
+  border-color: #ec5453;
+}
+.about__box:nth-child(2) .about__icon {
+  color: #ec5453;
+}
+
+.about__box:nth-child(3) {
+  border-color: #f9bf3f;
+}
+.about__box:nth-child(3) .about__icon {
+  color: #f9bf3f;
+}
+
+.about__box:nth-child(4) {
+  border-color: #a84cb8;
+}
+.about__box:nth-child(4) .about__icon {
+  color: #a84cb8;
+}
+
+/* Highlight Section */
+.about__happy {
+  padding: 40px;
+  background: linear-gradient(135deg, #f9bf3f, #facc15);
+  border-radius: 14px;
+  text-align: center;
+}
+
+/* Highlight Text */
+.about__happy-text {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #0f172a;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.about__button {
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #0f172a;
+
+  padding: 10px 22px;
+  background: transparent;
+  border: 1px solid #0f172a;
+  border-radius: 6px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* Button Hover */
+.about__button:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .about__skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about__box {
+    margin-bottom: 30px;
+  }
+}
+/* Dark Mode */
+body.dark .about {
+  background-color: #0f172a;
+}
+
+body.dark .about__description,
+body.dark .about__box-title,
+body.dark .about__happy-text {
+  color: #e5e7eb;
+}
+/*Edited  */
+body.dark .about__box {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .about__button {
+  border-color: #e5e7eb;
+  color: #e5e7eb;
+}
+
+body.dark .about__button:hover {
+  background: #e5e7eb;
+  color: #0f172a;
+}
+
+.about__icon {
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.about__box:hover .about__icon {
+  transform: rotate(8deg) scale(1.2);
+}

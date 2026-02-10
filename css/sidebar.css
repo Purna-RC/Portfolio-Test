@@ -1,0 +1,148 @@
+/* --------------------- Sidebar --------------------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #f2f3f7;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  transition: transform 0.5s ease;
+  z-index: 100;
+}
+
+/* Hamburger Icon */
+.sidebar__hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 200;
+  color: #2c98f0;
+}
+
+/* Hide Hamburger on Desktop */
+@media (min-width: 768px) {
+  .sidebar__hamburger {
+    display: none;
+  }
+}
+
+/* Sidebar Transform for Mobile */
+.sidebar.hidden {
+  transform: translateX(-320px);
+}
+
+/* Profile Image */
+.sidebar__image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #2c98f0;
+}
+
+/* Name & Job */
+.sidebar__name {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.sidebar__job {
+  font-family: "Quicksand", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #2c98f0;
+  text-transform: uppercase;
+ padding-left: 10%;
+  
+}
+
+.sidebar__job span {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Navigation List */
+.sidebar__list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 50px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sidebar__list__item {
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
+}
+
+.sidebar__list__item a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar__list__item a:hover {
+  background: #2c98f0;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* Animated Underline */
+.sidebar__list__item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #2c98f0;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+
+.sidebar__list__item:hover::after {
+  width: 80%;
+}
+
+/* Footer */
+.sidebar__copyright {
+  font-size: 12px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.5;
+}
+
+.sidebar__copyright span {
+  color: #2c98f0;
+  font-weight: 600;
+}
+
+/* Desktop Margin for Content */
+@media (min-width: 768px) {
+  body {
+    margin-left: 300px;
+  }
+}
